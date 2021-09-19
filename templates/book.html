@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2> Zmień: </h2>
-    <form method="POST" action="/books/{{ book_id }}/">
+    <form method="POST" action="/books/{{ book_id }}/" enctype=multipart/form-data>
         {{ form.hidden_tag() }}
         <table>
             {% for field in form if field.widget.input_type != 'hidden' %}
@@ -16,7 +16,7 @@
                 </tr>
             {% endfor %}
         </table>
-        <input type="submit" value="Go">
+        <input type="submit" value="Dodaj">
     </form>
 </body>
 </html>
